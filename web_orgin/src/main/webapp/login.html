@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登陆</title>
+</head>
+<body>
+  <form action="/myLogin/login" method="post">
+    用户：<input type="text" name="username"><br>
+    密码：<input type="password" name="password"><br>
+      <input type="text" name="checkcode">
+      <img src="/myLogin/checkcode" id="checkcodeimg"><br>
+    <input type="submit">
+  </form>
+    <script>
+        window.onload = function (){
+            var yzmImg = document.getElementById("checkcodeimg");
+            yzmImg.onclick = function (){
+                var date = new Date().getTime();
+                yzmImg.src = "/myLogin/checkcode?"+date;  //注意虚拟路径变更,JS和上方html
+            }
+        }
+    </script>
+</body>
+</html>
