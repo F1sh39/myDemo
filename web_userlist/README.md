@@ -1,6 +1,7 @@
 ## 案例
 
-项目结构：
+项目结构：  
+
 [![flZRwd.png](https://z3.ax1x.com/2021/08/08/flZRwd.png)](https://imgtu.com/i/flZRwd)
 
 ### 需求1：用户列表页面
