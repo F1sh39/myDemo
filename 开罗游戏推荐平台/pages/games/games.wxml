@@ -1,0 +1,53 @@
+<!--pages/games/games.wxml-->
+<view class="tab">
+	<image src="{{Game.iconImg}}"/>
+	<text>{{Game.title}}</text>
+	<button bindtap="downFile">下载📲</button>
+</view>
+<scroll-view class="content" 
+		scroll-y="true" scroll-top="{{scrollTop}}">
+	<scroll-view class='content-imgs' scroll-x>
+		<block wx:for="{{Game.gameImgs}}">
+			<image src="{{item}}" bindtap="clickImg" data-id="{{index}}" />
+		</block>
+	</scroll-view>
+	<view class="content-intrudution" bindtap="itd_fold">
+		<text decode="{{true}}">{{Game.introduction}}</text>
+	</view>
+	<view class="content-comment">
+		<form class="comment" bindsubmit="commentSubmit">
+			<textarea name="commentText" class="content-comment-text" placeholder="输入你宝贵的评论，请文明用语"></textarea>
+			<view class="content-comment-star">
+				<block wx:for="{{Game.starImg}}">
+					<image src="{{item}}" bindtap="getStar" data-id="{{index}}" />
+				</block>
+				<button wx:if="{{!userInfo.nickName}}" open-type="getUserInfo" 
+						bindgetuserinfo="getUserInfo" id="btn-dl">登陆</button>		
+				<button form-type='submit'>发表</button>
+				<input type="text" name="nickname" value='{{userInfo.nickName}}' style="display:none;"/>
+				<input type="text" name="headimg" value='{{userInfo.avatarUrl}}' style="display:none;"/>	
+				<input type="text" name="star" value='{{Game.star}}' style="display:none;"/>
+				<input type="text" name="starImg" value='{{Game.starImg}}' style="display:none;"/>
+			</view>				
+		</form>
+		<view class="fgx">
+			<text wx:if="{{!Game.haveComment}}">暂无评论，期待你的留言</text>
+			<text wx:else>以下为精彩评论</text>
+		</view>
+		<view class="content-comment-list" wx:if="{{Game.haveComment}}">
+			<block wx:for="{{Game.comments}}">
+				<view class="content-comment-listitem">
+					<view class="item-my">
+						<image src="{{item.headimg}}"/>
+						<text>{{item.nickname}}</text>
+						<!--<view class="list-star wx:for="{{item.starImg}}">
+								<image src="{{item}}"/>
+						</view>-->
+					</view>
+					<view class="comText">{{item.commentText}}</view>
+				</view>
+			</block>
+		</view>
+	</view>						
+
+</scroll-view>

@@ -1,0 +1,17 @@
+<scroll-view class="typetab-list" scroll-x>
+		<block wx:for="{{tabList}}">
+			<view class="typetab-item {{typeTab==index ? 'active':''}}" 
+			data-type="{{index}}" bindtap="changeType">{{item}}
+		</view>
+	</block>
+</scroll-view>
+<scroll-view class="typegame-list" scroll-y>
+	<view class="typegame-list-view">
+		<block wx:for="{{GameList}}">
+			<view class="small-game" wx:if="{{item.isShow}}" bindtap="getGame" data-id="{{index}}">
+				<image src="{{item.iconImg}}" />
+				<text>{{item.title}}</text>
+			</view>
+		</block>
+	</view>
+</scroll-view>

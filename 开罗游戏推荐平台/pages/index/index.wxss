@@ -1,0 +1,111 @@
+/**index.wxss**/
+page {
+  background-color: #E0FFFF;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+/* 标签栏 */
+.tab {
+  display: flex;
+}
+.tab-item {
+  flex: 1;
+  text-align: center;
+  font-size: 3.5vh;
+  line-height: 60rpx;
+  border-bottom: 6rpx solid #DCDCDC;
+  background-color: #FFD700;
+}
+.tab-item:first-child {
+  border-right: 1rpx solid #DCDCDC;
+}
+.tab-item.active {
+  border-bottom: 6rpx solid #B22222
+}
+/* 推荐页 */
+.page {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.page>swiper {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.recommend-view {
+  height: 100%;
+}
+.img_content,.img_content~view {  /*莫名bug不能使用父子选择器，便使用兄弟选择器代替 .img_content,.img_content~view*/
+  height: 45vh;
+  margin: 3%; 
+}
+.main_img {
+  height: 70%;  width: 100%;
+  border-radius: 5% 5% 0% 0%;
+  object-fit: contain;
+  display: block;
+}
+.content {
+  height: 30%;   width: 100%;
+  border-radius: 0% 0% 5% 5%;
+  background-color: white;
+  display: flex;
+}
+.content>image {
+  height: 10vh; width: 10vh;
+  margin-top: 1.5vh;  margin-left: 2vh; margin-right: 2vh;
+  object-fit: contain;
+  flex-shrink: 0; /*防止flex布局图片变形*/
+}
+.content-text text:first-child{
+  display: block;
+}
+.content-text text:last-child{
+  font-size: 30rpx;
+  color: #3C3C3C;
+}
+
+/*bag*/
+.typetab-list {
+  width: 100%;
+  height: 7vh;
+  border-bottom: 1rpx solid #e5e5e5;
+  display: inline-block;
+  white-space: nowrap;  
+}  
+.typetab-item {
+  width: 30vw;
+  height: 7vh;
+  display: inline-block;
+  line-height: 7vh;
+  text-align: center;
+}
+.typetab-item.active {
+  background-color: #FFD700;
+  border-radius: 7%;
+}
+.typegame-list{
+  height: 88vh; width: 100%;
+}
+.typegame-list-view{
+  display: flex;
+  flex-wrap: wrap;
+}
+.small-game {
+  width: 28vw; height: 25vh;
+  margin: 2vh 1vh;
+  display: flex;
+	flex-direction: column;
+	align-items: center;
+  background-color: white;
+}
+.small-game image{
+  width: 28vw; height: 28vw;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+.small-game text{
+  font-size: 4vw;
+}

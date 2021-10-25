@@ -1,0 +1,11 @@
+<!--pages/background/background.wxml-->
+<view class="user">
+	<image src="{{userInfo.avatarUrl}}"/>
+	<text>{{userInfo.nickName}}</text>
+	<button wx:if="{{!userInfo.nickName}}" open-type="getUserInfo" 
+			bindgetuserinfo="getUserInfo">授权登陆</button>
+</view>
+<view class="down" bindtap="goDown">
+	<image src="https://s.aigei.com/src/img/png/9c/9c6bf7cc535c4eb9b89dd276d9b06030.png?imageMogr2/auto-orient/thumbnail/!237x237r/gravity/Center/crop/237x237/quality/85/&e=1735488000&token=P7S2Xpzfz11vAkASLTkfHN7Fw-oOZBecqeJaxypL:wiyu6Tm3zrIRwcFpo3xEi5crtyY=" />
+	<text>我的下载</text>
+</view>

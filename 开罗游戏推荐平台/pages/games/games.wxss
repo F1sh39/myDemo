@@ -1,0 +1,106 @@
+/* pages/games/games.wxss */
+.tab{
+	height: 10vh;	width: 100vw;
+	padding-top: 1vh; padding-bottom: 0.5vh;
+	background-color: #FFD700;
+	display: flex;
+}
+.tab image{
+	height: 9vh; width: 9vh;
+  margin-left: 2vh;
+  object-fit: contain;
+  flex-shrink: 0; /*防止flex布局图片变形*/
+}
+.tab text{
+	display: block;
+	margin-left: 2vh;
+	font-size: 3.5vh;
+	line-height: 10vh;
+}
+.tab button{
+	height: 8vh;
+	margin-top: 1vh;
+	margin-right: 2vh;
+	line-height: 8vh;
+	float: right;
+	font-size: 3vh;
+	color: #228B22;
+}
+page {
+	height: 100%;
+	display: flex;
+  flex-direction: column;
+}
+.content {
+	flex: 1;
+  display: flex;
+	flex-direction: column;
+	height: 100%;
+}
+.content-imgs {
+	display: flex; white-space:nowrap;
+}
+.content-imgs image{
+	height: 60vh; width: 45vh;
+	margin: 0vh 2vh;
+}
+.content-intrudution {
+	padding: 2vh;
+	border-bottom: 1vh solid gray;
+}
+.content-comment-text {
+	height: 15vh;
+	margin: 1vh 1vh;
+	border: 1rpx solid gray;
+	border-radius: 3%;
+	padding: 10rpx;
+}
+.content-comment-star {
+	display: flex;
+	align-items: center;
+}
+.content-comment-star image {
+	height: 5vh;	width: 5vh;
+}
+.content-comment-star button {
+	height: 7vh;
+	line-height: 7vh;
+	margin-right: 5vw;
+}
+#btn-dl{
+	background-color: #008c00;
+	color: white;	
+}
+.comtent-comment {
+	margin-bottom: 2vh;
+	border-bottom: 1vh solid gray;
+}
+
+/*评论列表板块*/
+.fgx {
+	height: 8vh;
+	line-height: 8vh;
+}
+.content-comment-listitem {
+	width: 100%;
+	padding: 2vh;
+	margin: 0vh 1vw 3vh 1vw;
+	display: flex;
+	flex-direction:column;
+	background-color: #E0FFFF;
+	border-radius: 5%;
+}
+.item-my{
+	height: 12vw;
+	display: flex;
+	align-items: center;
+}
+.item-my image{
+	width: 10vw;	height: 10vw;
+	border-radius: 50%;
+}
+.item-my text{
+	height: 10vw;
+	line-height: 10vw;
+	margin-left: 5vw;
+}

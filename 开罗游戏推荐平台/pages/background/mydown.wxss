@@ -1,0 +1,28 @@
+/* pages/background/mydown.wxss */
+.typegame-list{
+  height: 100vh; width: 100%;
+}
+.down-in-view {
+	display: flex;
+	flex-direction: column;
+}
+.down-item{
+	height: 10vh;	width: 94vw;
+	padding-top: 1vh; padding-bottom: 0.5vh;
+	margin: 2vw 2vh;
+	background-color: #E0FFFF;
+	display: flex;
+	border-radius: 5%;
+}
+.down-item image{
+	height: 9vh; width: 9vh;
+  margin-left: 2vh;
+  object-fit: contain;
+  flex-shrink: 0; /*防止flex布局图片变形*/
+}
+.down-item text{
+	display: block;
+	margin-left: 2vh;
+	font-size: 3.5vh;
+	line-height: 10vh;
+}

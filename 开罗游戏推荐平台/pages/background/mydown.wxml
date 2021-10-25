@@ -1,0 +1,10 @@
+<scroll-view class="down-scr-view" scroll-y>
+	<view class="down-in-view">
+		<block wx:for="{{downfileList}}">
+			<view class="down-item" bindtap="getGame" data-id="{{index}}">
+				<image src="{{item.iconImg}}" />
+				<text>{{item.title}}</text>
+			</view>
+		</block>
+	</view>
+</scroll-view>

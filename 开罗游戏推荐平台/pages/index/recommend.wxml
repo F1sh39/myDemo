@@ -1,0 +1,15 @@
+<scroll-view class="recommend-view" 
+		scroll-y="true" scroll-top="{{scrollTop}}">
+	<block wx:for="{{GameList}}">
+		<view class="img_content" bindtap="getGame" data-id="{{index}}">
+			<image src="{{item.mainImg}}" class="main_img" />
+			<view class="content">
+				<image src="{{item.iconImg}}"/>
+				<view class="content-text">
+					<text>{{item.title}}</text>
+					<text>{{item.introduction}}</text>
+				</view>
+			</view>
+		</view>
+	</block>
+</scroll-view>

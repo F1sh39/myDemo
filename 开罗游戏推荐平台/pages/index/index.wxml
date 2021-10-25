@@ -1,0 +1,15 @@
+<!--index.wxml游戏推荐页-->
+<view class="tab">
+  <view class="tab-item {{tab==0?'active':''}}" bindtap="changeItem" data-item="0">好游推荐</view>
+  <view class="tab-item {{tab==1?'active':''}}" bindtap="changeItem" data-item="1">开罗合集</view>
+</view>
+<view class="page">
+  <swiper current="{{item}}" bindchange="changeTab" circular="true">
+    <swiper-item>
+      <include src="recommend.wxml" />  <!--好游推荐-->
+    </swiper-item>
+    <swiper-item>
+      <include src="bag.wxml" />  <!--开罗合集-->
+    </swiper-item>
+  </swiper>
+</view>

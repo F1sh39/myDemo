@@ -1,0 +1,39 @@
+/* pages/background/background.wxss */
+.user {
+	height: 40vh;
+	background: #FFD700;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.user image{
+	width: 30vw;	height: 30vw; 
+	margin: 2vh;
+	border-radius: 50%;
+	border: 1rpx solid black;
+}
+.user text {
+	font-size: 5vh;
+}
+.user button {
+	width: 40vw;
+	margin-top: 0.5vh;
+	background-color: #008c00;
+	color: white;	
+}
+.down {
+	margin: 5vh 0vh;
+	height: 8vh;
+	display: flex;
+	border-top: 1rpx solid #DCDCDC;
+	border-bottom: 1rpx solid #DCDCDC;
+}
+.down image{
+	margin: 0vw 2vh;
+	height: 8vh; width: 8vh;
+}
+.down text{
+	line-height: 8vh;
+	font-size: 4vh;
+	font-weight: bold;
+}
