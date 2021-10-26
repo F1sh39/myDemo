@@ -4,6 +4,8 @@
 + Druid数据库连接池技术，连接mysql，操作mydb数据库下的mydb_user表
 + JDBCTemplate技术操作sql
 + Tomcat作为服务器应用，Servlet处理表单数据
+### 项目结构
+[![WaF6Ld.png](https://z3.ax1x.com/2021/07/21/WaF6Ld.png)](https://imgtu.com/i/WaF6Ld)
 ### 分析
 + 表单action对应一个servlet实现类
 + Dao包操作数据库
@@ -22,5 +24,4 @@
 + JavaBean转变失败
   - 需要注意JavaBean属性与成员变量的区别，属性操作成员变量
   - 成员变量尽量与form的name值相同
-### 项目结构
-[![WaF6Ld.png](https://z3.ax1x.com/2021/07/21/WaF6Ld.png)](https://imgtu.com/i/WaF6Ld)
+
